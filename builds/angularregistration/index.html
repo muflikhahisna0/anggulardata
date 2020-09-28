@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Angular Registration</title>
+  <title>Angular Data</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,100,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
@@ -12,24 +12,41 @@
   <script src="js/lib/angular/angular-route.min.js"></script>
   <script src="js/lib/angular/angular-animate.min.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>.
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
   <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyAVFTFjeY5rSJYI9OMrfw1l1yifQjBPabQ",
-      authDomain: "angularregistration07.firebaseapp.com",
-      databaseURL: "https://angularregistration07-5f178.firebaseio.com",
-      storageBucket: "angularregistration07.appspot.com",
-      messagingSenderId: "961781361498"
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBoDSAYhRRR0LMgpTYiFZeorofDqPzf7xQ",
+      authDomain: "angulardata-18679.firebaseapp.com",
+      databaseURL: "https://angulardata-18679.firebaseio.com",
+      projectId: "angulardata-18679",
+      storageBucket: "angulardata-18679.appspot.com",
+      messagingSenderId: "1069442095773",
+      appId: "1:1069442095773:web:17dbbbec64a4e999025274",
+      measurementId: "G-CT8RQ5BFV4"
     };
-    firebase.initializeApp(config);
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script>
+    const rootRef = firebase.database().ref();
   </script>
   <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
 
   <script src="js/app.js"></script>
   <script src="js/services/authentication.js"></script>
   <script src="js/controllers/registration.js"></script>
-  <script src="js/controllers/success.js"></script>
+  <script src="js/controllers/meetings.js"></script>
 
 </head>
 
